@@ -1,3 +1,4 @@
+
 body{ 
 
     background: hsl(36, 100%, 99%);
@@ -20,7 +21,7 @@ nav{
 }
 .nav_menu li{
     list-style: none;
-    margin-inline: 30px;
+    margin-inline: 20px;
     font-size: 17px;
     
 
@@ -38,7 +39,7 @@ nav{
 
 main{
 
-    margin-top: 45px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 15px;
@@ -128,6 +129,48 @@ main{
     border-bottom: 1px solid hsl(232, 13%, 55%);
     padding-bottom: 15px;
 }
+
+
+.bottom_section{ 
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 40px;
+    
+    margin-top: 45px;
+
+}
+
+.card{
+
+    display:flex;
+    flex-direction: row;
+}
+.card img{
+    width: 45%;
+}
+.card_desc{
+    margin-left: 15px;
+}
+
+.card_desc h1{
+    font-weight: 800;
+    font-size: xx-large;
+    color: hsl(233, 8%, 79%);
+}
+
+.card_desc p{
+    color:hsl(236, 13%, 42%);
+    font-size: 15px;
+}
+
+
+.attribution{
+    width: 100%;
+    margin-top: 55px;
+    text-align: center;
+}
+
 
 
 
