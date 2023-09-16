@@ -1,177 +1,206 @@
-
-body{ 
-
+/* Global Styles */
+body {
     background: hsl(36, 100%, 99%);
-    padding: 60px;
-    font-family: "Inter",sans-serif ;
-}
-
-nav{
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    width: 100%;
-
-}
-
-.nav_menu{
+    padding: 2rem;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Navigation Styles */
+  nav {
     display: flex;
     justify-content: space-between;
-    
-}
-.nav_menu li{
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .nav_menu {
     list-style: none;
-    margin-inline: 20px;
-    font-size: 17px;
-    
-
-}
-.nav_menu a{
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav_menu li {
+    font-size: 1rem;
+  }
+  
+  .nav_menu a {
     text-decoration: none;
-    color:hsl(236, 13%, 42%);
+    color: hsl(236, 13%, 42%);
     transition: color 0.3s ease;
-}
+  }
+  
+  .nav_menu a:hover {
+    color: hsl(5, 85%, 63%);
+  }
 
-.nav_menu a:hover {
-    color:hsl(5, 85%, 63%) ; /* Change the text color on hover to a different color (e.g., orange) */
-}
+  .hamburger {
+    display: none; /* Hide the hamburger menu by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  /* Style the bars for the hamburger icon */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333; /* Adjust the color as needed */
+    margin: 5px auto;
+    transition: background-color 0.3s ease;
+  }
+  
 
-
-main{
-
-    margin-top: 40px;
+  /* Show the navigation menu when the show-menu class is added */
+.nav_menu.show-menu {
+    display: block;
+    position: absolute;
+    top: 100px; /* Adjust the position as needed */
+    right: 0;
+    background-color: #fff; /* Adjust the background color as needed */
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for the menu */
+  }
+  
+  /* Main Content Styles */
+  main {
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 15px;
-}
-
-.section_left img{
-    width:100%;
-
-
-}
-
-.subheading{
+  }
+  
+  .section_left img {
     width: 100%;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-}
-.subheading h1{
-    padding-top: 0px;
-    text-align:start;
-    color:hsl(240, 100%, 5%);
-    font-size:3.25rem;
-    font-weight: 900;
-    padding-inline-end: 90px;
-
-}
-
-.description{
-    padding-top:25px;
-    font-size: 18px;
-    
-    
-}
-
-.description p{
-    color:hsl(236, 13%, 42%);
-    text-align: left;
-    padding-right: 10px;
-    
-}
-
-.description button{
-    margin-top: 21px;
-    background-color:hsl(5, 85%, 63%); /* Set the background color to orange */
-    color: white; /* Set the text color to white */
-    padding: 15px 40px; /* Add padding to the button for spacing */
-    border: none; /* Remove the default button border */
-    
-    cursor: pointer; /* Change cursor to a pointer on hover */
-    font-size: 16px; /* Set the font size */
-    
-    transition: background-color 0.3s ease; 
-    
-}
-
-.description button:hover {
-    background-color:hsl(240, 100%, 5%);
-}
-
-/* Add a focus style for keyboard navigation */
-.description button:focus {
-    box-shadow: 0 0 0 3px rgba(255, 127, 0, 0.5); /* Add an orange border when the button is focused */
-}
-
-
-.section_right{
-    padding:0 35px;
-    background:hsl(240, 100%, 5%) ;
+    height: auto; /* Maintain image aspect ratio */
+  }
+  
+  .subheading {
     display: flex;
     flex-direction: column;
-    
-}
-
-.section_right h2{
-    color:hsl(35, 77%, 62%);
-    font-weight: 700;
+  }
+  
+  .subheading h1 {
     font-size: 2.5rem;
-}
-.section_right h3{
+    font-weight: 900;
+    color: hsl(240, 100%, 5%);
+    margin-bottom: 1rem;
+  }
+  
+  .description p {
+    font-size: 1rem;
+    color: hsl(236, 13%, 42%);
+  }
+  
+  .description button {
+    margin-top: 1rem;
+    background-color: hsl(5, 85%, 63%);
     color: white;
-}
-.section_right p{
-    color:hsl(233, 8%, 79%);
-}
-
-.section_right li{
-    list-style: none;
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .description button:hover {
+    background-color: hsl(240, 100%, 5%);
+  }
+  
+  /* Section Right Styles */
+  .section_right {
+    padding: 0 1rem;
+    background: hsl(240, 100%, 5%);
+  }
+  
+  .section_right h2 {
+    color: hsl(35, 77%, 62%);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  
+  .section_right h3,
+  .section_right p {
+    color: white;
+  }
+  
+  .section_right li {
     border-bottom: 1px solid hsl(232, 13%, 55%);
-    padding-bottom: 15px;
-}
-
-
-.bottom_section{ 
-    width: 100%;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-    
-    margin-top: 45px;
-
-}
-
-.card{
-
-    display:flex;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Bottom Section Styles */
+  .bottom_section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3.7rem;
+  }
+  
+  .card {
+    display: flex;
     flex-direction: row;
-}
-.card img{
-    width: 45%;
-}
-.card_desc{
-    margin-left: 15px;
-}
-
-.card_desc h1{
-    font-weight: 800;
-    font-size: xx-large;
-    color: hsl(233, 8%, 79%);
-}
-
-.card_desc p{
-    color:hsl(236, 13%, 42%);
-    font-size: 15px;
-}
-
-
-.attribution{
+  }
+  
+  .card img {
     width: 100%;
-    margin-top: 55px;
+    max-width: 100%; /* Ensure images don't overflow their container */
+  }
+  
+  .card_desc {
+    margin-left: 1rem;
+  }
+  
+  .card_desc h1 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: hsl(233, 8%, 79%);
+    margin-top: 0;
+  }
+  
+  .card_desc p {
+    color: hsl(236, 13%, 42%);
+    font-size: 1rem;
+  }
+  
+  /* Attribution Styles */
+  .attribution {
+    margin-top: 2.8rem;
     text-align: center;
-}
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (min-width: 768px) {
 
+   
+    main {
+      grid-template-columns: 2fr 1fr;
+    }
+    
+    .section_right {
+      padding: 0 1rem;
+    }
+    
+    .bottom_section {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 
-
-
-
+  @media (max-width: 768px) {
+    .nav_menu {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .section_right {
+      padding: 0;
+    }
+  }
+  
